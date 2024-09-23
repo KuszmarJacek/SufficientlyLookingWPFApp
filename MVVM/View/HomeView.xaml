@@ -1,0 +1,110 @@
+﻿<UserControl x:Class="SufficientlyLookingWPFApp.MVVM.View.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SufficientlyLookingWPFApp.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="460" d:DesignWidth="800">
+    <StackPanel>
+        <TextBlock Text="Discover"
+                   Foreground="White"
+                   FontSize="28"
+                   HorizontalAlignment="Left"
+                   Margin="0,0,0,20"
+                   />
+        <StackPanel Orientation="Horizontal"
+                    Margin="0,0,0,10">
+            <Border Width="400" Height="200">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#000046" Offset="0.0"/>
+                        <GradientStop Color="#1CB5E0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                                       RadiusY="10"
+                                       Rect="0,0,400,200"/>
+                </Border.Clip>
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="Hello!"
+                                   Foreground="White"
+                                   FontSize="28"
+                                   Margin="20,10,10,0"/>
+                        <TextBlock Text="I am a nice looking cat"
+                                   Foreground="White"
+                                   FontSize="18"
+                                   Margin="20,10,10,0"/>
+                        <Image Width="250"
+                               Height="250"
+                               Source="/Images/kitty.png" RenderTransformOrigin="0.5,0.5"
+                               HorizontalAlignment="Right"
+                               Margin="0,-50,-20,0">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-30"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <Border 
+                Width="200" 
+                Height="200" 
+                CornerRadius="10"
+                Margin="45,0,0,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#E55D87" Offset="0.0"/>
+                        <GradientStop Color="#5FC3E4" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>    
+            </Border>
+        </StackPanel>
+        
+        <StackPanel>
+            <!--set margin for every element-->
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Margin" Value="15,0,0,0"/>
+                </Style>
+            </StackPanel.Resources>
+            
+            <TextBlock Text="Most Common Procedures"
+                       Foreground="White"
+                       FontSize="20"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,10"/>
+            <StackPanel Orientation="Horizontal">
+                <Border 
+                    Width="150" 
+                    Height="150" 
+                    CornerRadius="10"
+                    Background="#009FFF"
+                    Margin="0"/>
+                <Border 
+                    Width="150" 
+                    Height="150" 
+                    CornerRadius="10"
+                    Background="#ec2F4B"/>
+                <Border 
+                    Width="150" 
+                    Height="150" 
+                    CornerRadius="10"
+                    Background="#F27121"/>
+                <Border 
+                    Width="150" 
+                    Height="150" 
+                    CornerRadius="10"
+                    Background="#c94b4b"/>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

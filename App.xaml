@@ -2,6 +2,8 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:SufficientlyLookingWPFApp"
+             xmlns:viewModel="clr-namespace:SufficientlyLookingWPFApp.MVVM.ViewModel"
+             xmlns:view="clr-namespace:SufficientlyLookingWPFApp.MVVM.View"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
@@ -9,6 +11,13 @@
                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/SearchBoxTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <!-- Add viewmodel with xmlns:viewModel and view with xmlns:view before this-->
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:DiscoveryViewModel}">
+                <view:DiscoveryView/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
