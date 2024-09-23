@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="460" d:DesignWidth="800">
     <StackPanel>
-        <TextBlock Text="Discover"
+        <TextBlock Text="Hello! Here are our saloon's services"
                    Foreground="White"
                    FontSize="28"
                    HorizontalAlignment="Left"
@@ -15,7 +15,13 @@
                    />
         <StackPanel Orientation="Horizontal"
                     Margin="0,0,0,10">
-            <Border Width="400" Height="200">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Margin" Value="45,0,0,0"/>
+                </Style>
+            </StackPanel.Resources>
+            
+            <Border Width="300" Height="200" Margin="0">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
                         <GradientStop Color="#000046" Offset="0.0"/>
@@ -26,49 +32,59 @@
                 <Border.Clip>
                     <RectangleGeometry RadiusX="10"
                                        RadiusY="10"
-                                       Rect="0,0,400,200"/>
+                                       Rect="0,0,300,200"/>
                 </Border.Clip>
                 <Grid>
                     <StackPanel>
-                        <TextBlock Text="Hello!"
+                        <TextBlock Text="Cats"
                                    Foreground="White"
                                    FontSize="28"
                                    Margin="20,10,10,0"/>
-                        <TextBlock Text="I am a nice looking cat"
+                        <TextBlock Text="We offer services for felines"
                                    Foreground="White"
                                    FontSize="18"
                                    Margin="20,10,10,0"/>
-                        <Image Width="250"
-                               Height="250"
-                               Source="/Images/kitty.png" RenderTransformOrigin="0.5,0.5"
-                               HorizontalAlignment="Right"
-                               Margin="0,-50,-20,0">
-                            <Image.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform/>
-                                    <SkewTransform/>
-                                    <RotateTransform Angle="-30"/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Image.RenderTransform>
-                        </Image>
+                        <Image Width="200"
+                               Height="200"
+                               Source="/Images/kitty.png"
+                               HorizontalAlignment="Right"/>
                     </StackPanel>
                 </Grid>
             </Border>
-            <Border 
-                Width="200" 
-                Height="200" 
-                CornerRadius="10"
-                Margin="45,0,0,0">
+            
+            <Border Width="300" Height="200">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
                         <GradientStop Color="#E55D87" Offset="0.0"/>
                         <GradientStop Color="#5FC3E4" Offset="1"/>
                     </LinearGradientBrush>
-                </Border.Background>    
+                </Border.Background>
+
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                           RadiusY="10"
+                           Rect="0,0,300,200"/>
+                </Border.Clip>
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="Dogs"
+                       Foreground="White"
+                       FontSize="28"
+                       Margin="20,10,10,0"/>
+                        <TextBlock Text="And our puppy friends"
+                       Foreground="White"
+                       FontSize="18"
+                       Margin="20,10,10,0"/>
+                        <Image Width="200"
+                           Height="200"
+                           Source="/Images/puppy.png"
+                           HorizontalAlignment="Right"/>
+                    </StackPanel>
+                </Grid>
             </Border>
         </StackPanel>
-        
+
+
         <StackPanel>
             <!--set margin for every element-->
             <StackPanel.Resources>
@@ -88,22 +104,42 @@
                     Height="150" 
                     CornerRadius="10"
                     Background="#009FFF"
-                    Margin="0"/>
+                    Margin="0">
+                    <TextBlock Text="Nail trimming"
+                        Foreground="White"
+                        FontSize="18"
+                        Margin="10,10,10,0"/>   
+                </Border>
                 <Border 
                     Width="150" 
                     Height="150" 
                     CornerRadius="10"
-                    Background="#ec2F4B"/>
+                    Background="#ec2F4B">
+                    <TextBlock Text="Haircuts"
+                        Foreground="White"
+                        FontSize="18"
+                        Margin="10,10,10,0"/>
+                </Border>
                 <Border 
                     Width="150" 
                     Height="150" 
                     CornerRadius="10"
-                    Background="#F27121"/>
+                    Background="#F27121">
+                    <TextBlock Text="Haircuts"
+                        Foreground="White"
+                        FontSize="18"
+                        Margin="10,10,10,0"/>
+                </Border>
                 <Border 
                     Width="150" 
                     Height="150" 
                     CornerRadius="10"
-                    Background="#c94b4b"/>
+                    Background="#c94b4b">
+                    <TextBlock Text="Bathing"
+                        Foreground="White"
+                        FontSize="18"
+                        Margin="10,10,10,0"/>
+                </Border>
             </StackPanel>
         </StackPanel>
     </StackPanel>

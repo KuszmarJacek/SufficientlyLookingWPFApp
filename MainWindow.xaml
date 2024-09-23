@@ -16,7 +16,7 @@
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
-    <Border Background="Gray" CornerRadius="10">
+    <Border CornerRadius="10" Background="#0d47a1">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -27,7 +27,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text=":D"
+            <TextBlock Text="Animal Saloon"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    Foreground="White"
@@ -61,7 +61,7 @@
                     Height="40"
                     VerticalContentAlignment="Center"
                     HorizontalAlignment="Left"
-                    Margin="10, 0, 0, 0"
+                    Margin="0,0 0,0"
                     Style="{StaticResource SearchBoxTheme}"/>
 
             <ContentControl Grid.Row="1"
